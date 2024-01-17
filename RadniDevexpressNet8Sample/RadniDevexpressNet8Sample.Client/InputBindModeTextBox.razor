@@ -1,0 +1,14 @@
+﻿@using CommonBlazor.Infrastructure
+@using CommonBlazor.UI.Components
+@namespace CommonBlazor.UI.Components
+
+@inherits ComponentBase
+
+<DxTextBox @ref="TextBox"
+           NullText="@NullText"
+           Text="@Text"
+           TextChanged="OnTextChanged"
+           BindValueMode="BindValueMode.OnInput"
+           ClearButtonDisplayMode="DataEditorClearButtonDisplayMode.Auto"
+           Enabled="Enabled">
+</DxTextBox>

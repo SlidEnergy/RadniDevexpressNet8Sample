@@ -1,0 +1,34 @@
+﻿@page "/workOrders"
+@using CommonBlazor.UI.List.DynamicList
+@using AndromedaBlazor.ViewModel
+@rendermode @(new InteractiveAutoRenderMode(true))
+@using CommonBlazor.UI
+
+<PageTitle>Radni</PageTitle>
+
+@using CommonBlazor.UI.List.DynamicList
+@using AndromedaBlazor.ViewModel;
+@namespace RadniDevexpressNet8Sample.client.Pages
+
+@inherits CommonBlazor.UI.ApplicationComponentBase
+
+<DxGridLayout>
+    <Rows>
+        <DxGridLayoutRow Height="100px" />
+        <DxGridLayoutRow />
+        <DxGridLayoutRow Height="auto" />
+    </Rows>
+    <Columns>
+        <DxGridLayoutColumn Width="100%" />
+    </Columns>
+    <Items>
+        <DxGridLayoutItem Row="1" Column="0">
+            <Template>
+                <div class="content-wrap">
+                    <DynamicEntityList CssClass="andromeda-full-height-grid" TData="RadniNalogListData" Controller="_controller" RowDoubleClick="OnRowDoubleClick" VirtualScrollingEnabled="true">
+                    </DynamicEntityList>
+                </div>
+            </Template>
+        </DxGridLayoutItem>
+    </Items>
+</DxGridLayout>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AndromedaBlazor</title>
+    <base href="/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Google font and icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Custom theme-->
+    <!--<link href="css/office_blue/bootstrap.css" rel="stylesheet" />-->
+    <!--Blazor css isolation-->
+    @DxResourceManager.RegisterScripts()
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="RadniDevexpressNet8Sample.styles.css" rel="stylesheet" />
+
+    <!--Devexprexx library-->
+    <link rel="stylesheet" href="_content/DevExpress.Blazor.Themes/blazing-berry.bs5.css" />
+
+    <!--Devextreme-->
+    <link as="stylesheet" rel="preload" href="css/devextreme/dx.common.css">
+    <link rel="stylesheet" href="css/devextreme/dx.material.blue.light.css">
+
+    <script type="text/javascript" src="scripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/devextreme/dx.all.js"></script>
+
+    <!--Manifest-->
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="192x192" href="images/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="images/icon-512.png" />
+
+    <!--App css-->
+    <link href="css/app.css" rel="stylesheet" />
+
+    <!--Custom css-->
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/devexpress.css" rel="stylesheet" />
+
+    <style type="text/css">
+
+        .splash-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            height: 100vh;
+            font-family: "Segoe UI",Roboto,"Helvetica Neue","-apple-system",BlinkMacSystemFont,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: .88rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+            .splash-screen .spinner-border {
+                border: .2em solid;
+                border-color: #5f368d #bfbfbf #bfbfbf;
+                width: 120px;
+                height: 120px;
+            }
+
+        .splash-screen-caption {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+
+        .splash-screen-text {
+            color: #a1a1a1;
+            margin-top: .5rem;
+        }
+    </style>
+    <HeadOutlet />
+</head>
+<body>
+
+    <Routes></Routes>
+
+    @* <script src="_framework/blazor.webassembly.js"></script> *@
+    <script src="_framework/blazor.web.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script src=""></script>
+</body>
+
+</html>
+
+<script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>

@@ -1,0 +1,184 @@
+﻿:root {
+    --primary-color: #13b5ea;
+    --title-color: #00456e;
+    --titlebackground-color: rgb(240, 242, 245);
+    --sub-title-color: #6a6d70;
+    /*    --border-color: rgb(226, 227, 229); */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto' !important;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+
+/*---  Padding ---*/
+.no-pad {
+    padding: 0;
+}
+
+/*small*/
+.pad-sm {
+    padding: 8px;
+}
+
+.pad-sm-top {
+    padding-top: 8px;
+}
+
+.pad-sm-right {
+    padding-right: 8px;
+}
+
+.pad-sm-bottom {
+    padding-bottom: 8px;
+}
+
+.pad-sm-left {
+    padding-left: 8px;
+}
+
+/*medium*/
+.pad-md {
+    padding: 16px;
+}
+
+.pad-md-top {
+    padding-top: 16px;
+}
+
+.pad-md-right {
+    padding-right: 16px;
+}
+
+.pad-md-bottom {
+    padding-bottom: 16px;
+}
+
+.pad-md-left {
+    padding-left: 16px;
+}
+
+
+/*---  Margin ---*/
+.no-margin {
+    padding: 0;
+}
+
+/*small*/
+.margin-sm {
+    margin: 8px;
+}
+
+.margin-sm-top {
+    margin-top: 8px;
+}
+
+.margin-sm-right {
+    margin-right: 8px;
+}
+
+.margin-sm-bottom {
+    margin-bottom: 8px;
+}
+
+.margin-sm-left {
+    margin-left: 8px;
+}
+
+/*medium*/
+.margin-md {
+    margin: 16px;
+}
+
+.margin-md-top {
+    margin-top: 16px;
+}
+
+.margin-md-right {
+    margin-right: 16px;
+}
+
+.margin-md-bottom {
+    margin-bottom: 16px;
+}
+
+.margin-md-left {
+    margin-left: 16px;
+}
+
+.header-wrap {
+    margin-top: 6px;
+    display: flex;
+}
+
+.title-wrap {
+    width: 300px;
+    padding: 8px 12px;
+    color: var(--title-color);
+    background-color: var(--titlebackground-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-icon-attachment {
+    width: 16px;
+    height: 16px;
+    -webkit-mask-image: url("../icons/attachment.svg");
+    mask-image: url("../icons/attachment.svg");
+    margin: 0 8px 0 0;
+    background-color: currentColor;
+}
+
+.andromeda-icon {
+    cursor: pointer;
+    width: 18px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.andromeda-toolbar {
+    /*height: 28px;*/
+    box-sizing: content-box;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0;
+}
+
+.andromeda-button-add {
+    background-color: #4FADEA;
+    border-radius: 5px;
+}
+
+.andromeda-button-edit {
+    background-color: #B0B0B0;
+    border-radius: 5px;
+}
+
+.dxbl-disabled.andromeda-button-edit {
+    background-color: #B0B0B0;
+}
+
+.andromeda-button-delete {
+    background-color: orangered;
+    border-radius: 5px;
+}
+
+.andromeda-button-refresh {
+    background-color: #4FADEA;
+    border-radius: 5px;
+}
+
+.editor button.dxbl-edit-btn-clear {
+    /*display: none;*/
+    margin-right: 15px;
+}

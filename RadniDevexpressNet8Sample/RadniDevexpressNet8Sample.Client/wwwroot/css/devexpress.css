@@ -1,0 +1,279 @@
+﻿/*TABS*/
+.nav-tabs > li > a {
+    font-size: 12px;
+}
+
+/*GRID*/
+/*Grid header*/
+/*.my-grid .dxbl-grid-header-content {
+    color: var(--title-color);
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+*/
+/*Grid rows -- TODO try to find better tag which only belongs to dxgrid, not to tables*/
+/*.my-grid table tr > td {
+    font-size: 11px !important;
+    background-color: rgb(250, 250, 250);
+    border-color: rgb(238, 241, 242) !important;
+}
+*/
+/*Grid selected row*/
+/*.my-grid .dxbl-grid-selected-row {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+*/
+/*Grid pagination */
+/*.my-grid .page-link {
+    padding: 0.5rem 0.5rem;
+}
+*/
+/*.my-grid .pagination-lg .page-link {
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+}
+*/
+/*.my-grid .pagination-sm .page-link {
+    padding: 0.25rem 0.25rem;
+    font-size: 0.77rem;
+}
+*/
+/*.my-grid .pagination {
+    border-radius: 3em;
+    padding: 0.4rem;
+}
+*/
+/*    .my-grid .pagination .page-link,
+    .my-grid .pagination .page-item:first-child .page-link,
+    .my-grid .pagination .page-item:last-child .page-link,
+    .my-grid .pagination-lg .page-link,
+    .my-grid .pagination-lg .page-item:first-child .page-link,
+    .my-grid .pagination-lg .page-item:last-child .page-link,
+    .my-grid .pagination-sm .page-link,
+    .my-grid .pagination-sm .page-item:first-child .page-link,
+    .my-grid .pagination-sm .page-item:last-child .page-link {
+        border-radius: 3em;
+        box-sizing: content-box;
+        margin-left: 5px;
+        line-height: 1rem;
+        text-align: center;
+        min-width: 1rem;
+    }
+*/
+/*.my-grid-grayedit {
+    border: none !important;
+}
+
+    .my-grid-grayedit .dxbl-grid-header-content {
+        color: #00456E;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .my-grid-grayedit .dxbl-grid-table {
+    }
+
+        .my-grid-grayedit .dxbl-grid-table tr.dxbl-grid-header-row .dxbl-grid-header {
+            background: white !important;
+        }
+
+    .my-grid-grayedit .dxbl-grid-empty-cell {
+        background: white !important;
+        visibility: hidden;
+    }
+
+    .my-grid-grayedit .dxbl-grid-table > tbody > tr {
+        background: #F5F5F5;
+        border: 2px solid white;
+    }
+
+    .my-grid-grayedit .dxbl-grid-table > tbody > td {
+        border: 2px solid white;
+    }
+
+    .my-grid-grayedit .dxbl-grid-table > thead > tr > th {
+        border: 2px solid white;
+    }
+*/
+
+/*Editors*/
+
+/*Editor focus*/
+.andromeda-editor .form-control:focus {
+    -webkit-box-shadow: inset 0 1px 1px rgba(34, 34, 34, 0.075), 0 0 0 0.15rem rgba(19, 181, 234, 0.2);
+    box-shadow: inset 0 1px 1px rgba(34, 34, 34, 0.075), 0 0 0 0.15rem rgba(19, 181, 234, 0.2);
+}
+
+/*Editor hover focus*/
+dxbl-input-editor.andromeda-editor > input:hover {
+    /*border: solid 1px var(--primary-color);*/
+}
+
+dxbl-input-editor.andromeda-editor > input {
+    border-radius: 4px;
+}
+
+/*Readonly visual style*/
+.andromeda-editor-readonly > dxbl-input-editor {
+    --dxbl-text-edit-border-width: 0px;
+    --dxbl-text-edit-focus-shadow-spread: 0rem;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: rgb(205, 205, 205);
+    background-color: transparent;
+}
+
+.andromeda-editor-readonly.dxbl-readonly {
+    --dxbl-text-edit-border-width: 0px;
+    --dxbl-text-edit-focus-shadow-spread: 0rem;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: rgb(205, 205, 205) !important;
+    background-color: transparent;
+}
+
+.andromeda-editor-readonly.dxbl-disabled {
+    --dxbl-text-edit-border-width: 0px;
+    --dxbl-text-edit-focus-shadow-spread: 0rem;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: rgb(205, 205, 205) !important;
+    background-color: transparent;
+}
+
+dxbl-input-editor.dxbl-readonly {
+    /*border-color: transparent;*/
+    background-color: transparent;
+}
+
+.title-editor-readonly {
+    border-color: transparent;
+}
+
+.andromeda-editor-readonly .dxbl-editor-disabled {
+    opacity: 1;
+}
+
+/*Date edit remove date picker in readonly mode*/
+.andromeda-editor-readonly .dxbl-btn-group {
+    display: none !important;
+}
+
+.andromeda-editor-readonly .dxbl-btn-group-right {
+    display: none !important;
+}
+
+/*Button */
+.andromeda-button {
+    border-radius: 4px;
+}
+
+/*TagBox*/
+.dxbl-tag,
+.dxbl-tag-text {
+    width: 100%;
+}
+
+/*Modal dialog example*/
+.andromeda-modal-dialog .dxbl-modal-content, .andromeda-modal-dialog .popup-button {
+    border-radius: 10px;
+}
+
+
+/*GRID*/
+.andromeda-full-height-grid {
+    overflow: hidden;
+    height: 100%;
+    border: none;
+}
+
+    .andromeda-full-height-grid .dxbl-grid {
+        height: 100%;
+        border: none;
+    }
+
+        .andromeda-full-height-grid .dxbl-grid .dxbl-grid-table {
+            border: none;
+        }
+
+    .andromeda-full-height-grid .dxbl-grid-table > thead > tbody > th {
+        border: none;
+        color: #064D7A;
+        background-color: white !important;
+        overflow-wrap: normal;
+    }
+
+    .andromeda-full-height-grid .dxbl-grid-table > tbody > tr {
+        border: none;
+        background-color: #F5F5F5 !important;
+    }
+
+    .andromeda-full-height-grid .dxbl-grid-table .dxbl-checkbox ::after {
+        border: 1.5px solid #4FADEA !important;
+    }
+
+    .andromeda-full-height-grid .dxbl-grid-table td {
+        white-space: nowrap;
+        border: 2px solid white !important;
+    }
+
+.custom-lookup-grid {
+    border: none;
+    height: 300px;
+}
+
+.dxbl-grid:not(.lookup-grid) .dxbl-grid-selected-row > td:not(.dxbl-grid-empty-cell):not(.dxbl-grid-indent-cell) {
+    background-color: transparent;
+}
+
+.andromeda-full-height-grid.spinner-container, .andromeda-full-height-grid.spinner-container {
+    height: 100%
+}
+
+.andromeda-side-drawer-tab-with-padding {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.andromeda-ticket-asset-selector-grid .dxbl-grid {
+    max-height: 400px;
+}
+
+
+dxbl-input-editor.ipEditor {
+    --dxbl-text-edit-border-width: 0px;
+}
+
+.dxbl-text-edit > input {
+    background-color: white;
+    --dxbl-text-edit-disabled-opacity: 100%;
+}
+
+.dxbl-row {
+    padding: 15px;
+    display: block;
+}
+
+.dxbl-expandable-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dxbl-grid {
+    --dxbl-grid-font-size: 0.83rem;
+}
+
+.side-drawer-body{
+    padding: 15px
+}
+
+.dxbl-accordion-item-content {
+    font-size: 0.83rem;
+}

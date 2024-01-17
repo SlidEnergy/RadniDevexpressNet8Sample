@@ -1,0 +1,46 @@
+﻿@using CommonBlazor.UI.Components
+@using Microsoft.AspNetCore.Components
+
+@namespace CommonBlazor.UI.Filtering.HeaderFilter
+
+@inherits CommonBlazor.UI.ApplicationComponentBase
+@typeparam TData;
+
+@if (Controller.IsInitialized && _emptyRendered)
+{
+    <div class="grid-container">
+        <DxGrid @ref="_grid"
+                CssClass="@GetCombinedCssClass("header-filter-grid")"
+                Data="@Controller.DataSource"
+                KeyFieldName="@Controller.KeyFieldName"
+                ShowFilterRow="true"
+                CustomizeElement="Controller.OnCustomizeElement"
+                AllowSelectRowByClick="true"
+                PagerNavigationMode="PagerNavigationMode.Auto"
+                PagerVisibleNumericButtonCount="10"
+                PageSizeSelectorVisible="true"
+                PageSize="10"
+                VirtualScrollingEnabled="true"
+                ColumnResizeMode="GridColumnResizeMode.ColumnsContainer"
+                SelectedDataItem="@Controller.SelectedDataItemInternal"
+                SelectionMode="@Controller.SelectionMode"
+                PageIndex="Controller.SelectedPageIndex"
+                KeyboardNavigationEnabled="true"
+                RowClick="Controller.OnRowClick"
+                SelectedDataItemChanged="Controller.OnSelectedDataItemChanged"
+                SelectedDataItemsChanged="Controller.OnSelectedDataItemsChanged">
+            <Columns>
+                <DxGridSelectionColumn Width="30px"></DxGridSelectionColumn>
+                @Controller.RenderGridColumns();
+            </Columns>
+        </DxGrid>
+    </div>
+}
+else
+{
+    <div class="spinner-container">
+        <div class="card">
+            <Spinner></Spinner>
+        </div>
+    </div>
+}

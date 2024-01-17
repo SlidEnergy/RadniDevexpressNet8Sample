@@ -1,0 +1,20 @@
+﻿@using System.Dynamic
+@using DevExpress.Drawing.Printing.Internal
+@typeparam TData;
+@inherits CommonBlazor.UI.ApplicationComponentBase
+
+@namespace CommonBlazor.UI.List.DynamicList
+
+<EntityList CssClass="@CssClass"
+              GridCssClass="@GridCssClass"
+              TData="ExpandoObject"
+              Controller="Controller"
+              RowDoubleClick="OnRowDoubleClick"
+              Columns="Columns"
+              ShowSearchBox="@ShowSearchBox"
+              VirtualScrollingEnabled="@VirtualScrollingEnabled"
+              SelectedDataItemChanged="OnSelectedDataItemChanged"
+              SelectedDataItemsChanged="OnSelectedDataItemsChanged"
+              ShouldNotRender="ShouldNotRender"
+              PageSize="@PageSize">
+</EntityList>

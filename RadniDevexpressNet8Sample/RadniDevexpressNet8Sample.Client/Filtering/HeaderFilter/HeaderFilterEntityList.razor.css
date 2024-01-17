@@ -1,0 +1,23 @@
+﻿.spinner-container {
+    position: relative;
+    min-height: 300px !important;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+}
+
+.grid-container ::deep .header-filter-grid .dxbl-grid-header-row {
+    display: none;
+}
+
+.grid-container ::deep .header-filter-grid {
+    border: none;
+    height: 300px;
+}

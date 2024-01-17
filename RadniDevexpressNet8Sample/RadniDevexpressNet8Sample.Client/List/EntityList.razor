@@ -1,0 +1,62 @@
+﻿@using System.Text.Encodings.Web
+@using DevExpress.Drawing.Printing.Internal
+@using Microsoft.AspNetCore.Components
+@namespace CommonBlazor.UI.List
+
+@inherits CommonBlazor.UI.ApplicationComponentBase
+@typeparam TData;
+
+@if (_initialized && _emptyRendered)
+{
+    <div @oncontextmenu:preventDefault class="@_containerGridCssClass">
+        <DxGrid @ref="Grid" id="grid"
+                CssClass="@GridCssClass"
+                Data="@Controller.DataSource"
+                KeyFieldName="@Controller.KeyFieldName"
+                ShowFilterRow="true"
+                CustomizeElement="Controller.OnCustomizeElement"
+                AllowSelectRowByClick="true"
+                PagerNavigationMode="PagerNavigationMode.Auto"
+                PagerVisibleNumericButtonCount="10"
+                PageSizeSelectorVisible="true"
+                PageSize="@PageSize"
+                KeyboardNavigationEnabled="true"
+                VirtualScrollingEnabled="@(VirtualScrollingEnabled ?? false)"
+                FilterMenuButtonDisplayMode="GridFilterMenuButtonDisplayMode.Always"
+                ShowSearchBox="@ShowSearchBox"
+                SearchTextParseMode="GridSearchTextParseMode.ExactMatch"
+                SearchText="@Controller.SearchText"
+                ColumnResizeMode="GridColumnResizeMode.ColumnsContainer"
+                SelectionMode="@Controller.SelectionMode"
+                RowDoubleClick="OnRowDoubleClick"
+                PageIndex="Controller.SelectedPageIndex"
+                RowClick="Controller.OnRowClick"
+                UnboundColumnData="Controller.OnUnboundColumnData"
+                PageSizeChanged="Controller.OnPageSizeChanged"
+                SelectedDataItemChanged="Controller.OnSelectedDataItemChanged"
+                SelectedDataItems="@Controller.SelectedDataItemsInternal"
+                SelectedDataItemsChanged="Controller.OnSelectedDataItemsChanged">
+            <Columns>
+                <DxGridSelectionColumn Width="30px"></DxGridSelectionColumn>
+                @Controller.RenderGridColumns();
+            </Columns>
+        </DxGrid>
+    </div>
+}
+else
+{
+    <div class="@_containerSpinnerCssClass">
+        <div class="card">
+            <Spinner></Spinner>
+        </div>
+    </div>
+}
+
+@* @if (Controller.CommandManager != null)
+{
+    <DxContextMenu @ref=ContextMenu>
+        <Items>
+            @Controller.CommandManager.BuildContextMenuItems()
+        </Items>
+    </DxContextMenu>
+} *@
